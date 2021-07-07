@@ -1,10 +1,10 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title color="dark" style="text-align: left">
+<ion-header  [translucent]="true">
+  <ion-toolbar >
+    <ion-title color="dark" slot="start">
       Loja de pontos
     </ion-title>
 
-    <ion-title color="dark" style="text-align: right">
+    <ion-title color="dark" slot="end">
       50
     <ion-icon name="body"></ion-icon>
     </ion-title>
@@ -15,34 +15,29 @@
 
   <ion-row></ion-row>
 
-<ion-grid>
-    <ion-card>
-      <ion-item color="success">
-      <ion-label>Cores</ion-label>
+<ion-grid>   <!-- Botão pra alterar as cores -->
+    <ion-button (click)="alteradorCores()" style="height: 45px;" expand="block" color="success">   
+      <ion-label style="padding-right:75%;">Cores</ion-label>
       <ion-icon name="chevron-down-outline"></ion-icon>
-      </ion-item>
-    </ion-card>
+    </ion-button>
+    
 
     <ion-col></ion-col> <!-- Serve para dar espaço entre os cards -->
 
 
   <ion-row>
     <ion-col>
-      <ion-card>
-        <ion-item color="tertiary">
-          <ion-label>Ícone</ion-label>
+      <ion-button style="height: 45px;" expand="block" color="tertiary">
+          <ion-label style="padding-right:45%;">Ícone</ion-label>
           <ion-icon name="leaf-sharp"></ion-icon>
-        </ion-item>
-      </ion-card>
+      </ion-button>
     </ion-col>
 
     <ion-col>
-      <ion-card>
-        <ion-item color="dark">
-          <ion-label>Áudio</ion-label>
+      <ion-button style="height: 45px;" expand="block" color="dark">
+          <ion-label style="padding-right:45%;">Áudio</ion-label>
           <ion-icon color="light" name="volume-mute"></ion-icon>
-        </ion-item>
-      </ion-card>
+      </ion-button>
     </ion-col>
   </ion-row>
 
@@ -51,7 +46,7 @@
     <ion-item color="medium">
       <ion-label>Tema</ion-label>
       <ion-icon name="sunny"></ion-icon>
-      <ion-toggle></ion-toggle>
+      <ion-toggle color="dark"></ion-toggle>
       <ion-icon name="sunny-outline"></ion-icon>
     </ion-item>
   </ion-card>
@@ -73,7 +68,7 @@
   <ion-row nowrap>
 
     <ion-col>
-      <ion-fab-button size="large" fab-fixed color="success">
+      <ion-fab-button size="large" fab-fixed color="success" (click)="alertaPrimata()">
         <img src="assets/icon/primata.png" width="35">
       </ion-fab-button>
     </ion-col>

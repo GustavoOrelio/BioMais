@@ -11,49 +11,50 @@ const routes: Routes = [
     loadChildren: () => import('./digestorio/digestorio.module').then( m => m.DigestorioPageModule)
   },
   {
-    path: 'respiratorio',
-    loadChildren: () => import('./respiratorio/respiratorio.module').then( m => m.RespiratorioPageModule)
+    path: 'reprodutor',
+    loadChildren: () => import('./reprodutor/reprodutor.module').then( m => m.ReprodutorPageModule)
   },
   {
-    path: 'cardiovascular',
-    loadChildren: () => import('./cardiovascular/cardiovascular.module').then( m => m.CardiovascularPageModule)
+    path: 'respiratorio',
+    loadChildren: () => import('./respiratorio/respiratorio.module').then( m => m.RespiratorioPageModule)
   },
   {
     path: 'urinario',
     loadChildren: () => import('./urinario/urinario.module').then( m => m.UrinarioPageModule)
   },
   {
-    path: 'reprodutor',
-    loadChildren: () => import('./reprodutor/reprodutor.module').then( m => m.ReprodutorPageModule)
+    path: 'configuracoes',
+    loadChildren: () => import('./configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
   },
   {
-    path: 'boca',
-    loadChildren: () => import('./boca/boca.module').then( m => m.BocaPageModule)
+    path: 'circulatorio',
+    loadChildren: () => import('./circulatorio/circulatorio.module').then( m => m.CirculatorioPageModule)
   },
   {
-    path: 'faringe',
-    loadChildren: () => import('./faringe/faringe.module').then( m => m.FaringePageModule)
+    path: 'tab4',
+    loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
   },
   {
-    path: 'esofago',
-    loadChildren: () => import('./esofago/esofago.module').then( m => m.EsofagoPageModule)
+    path: 'distrito-sanguineo',
+    loadChildren: () => import('./distrito-sanguineo/distrito-sanguineo.module').then( m => m.DistritoSanguineoPageModule)
   },
   {
-    path: 'estomago',
-    loadChildren: () => import('./estomago/estomago.module').then( m => m.EstomagoPageModule)
+    path: 'distrito-linfatico',
+    loadChildren: () => import('./distrito-linfatico/distrito-linfatico.module').then( m => m.DistritoLinfaticoPageModule)
   },
   {
-    path: 'intestino',
-    loadChildren: () => import('./intestino/intestino.module').then( m => m.IntestinoPageModule)
+    path: 'defesas-corpo',
+    loadChildren: () => import('./defesas-corpo/defesas-corpo.module').then( m => m.DefesasCorpoPageModule)
   },
   {
-    path: 'intestino-grosso',
-    loadChildren: () => import('./intestino-grosso/intestino-grosso.module').then( m => m.IntestinoGrossoPageModule)
+    path: 'questao-multipla-escolha',
+    loadChildren: () => import('./questao-multipla-escolha/questao-multipla-escolha.module').then( m => m.QuestaoMultiplaEscolhaPageModule)
   },
   {
-    path: 'anus',
-    loadChildren: () => import('./anus/anus.module').then( m => m.AnusPageModule)
+    path: 'questao-par',
+    loadChildren: () => import('./questao-par/questao-par.module').then( m => m.QuestaoParPageModule)
   }
+
 ];
 @NgModule({
   imports: [

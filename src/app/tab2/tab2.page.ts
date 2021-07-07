@@ -10,11 +10,14 @@ export class Tab2Page {
 
   constructor(public router:Router) {}
 
-  chamarDigestorio(){
+  chamardiGestorio(){
     this.router.navigate(['digestorio']);
   }
-  chamarCardiovascular(){
-    this.router.navigate(['cardiovascular'])
+  chamarConf(){
+    this.router.navigate(['configuracoes'])
+  }
+  chamarcirCulatorio(){
+    this.router.navigate(['circulatorio'])
   }
   chamarRespiratorio(){
     this.router.navigate(['respiratorio'])

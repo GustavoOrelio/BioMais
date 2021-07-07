@@ -1,66 +1,53 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-row>
-    <ion-title>
-      Bio Mais
-    </ion-title>
-    <ion-icon size="large" name="list-sharp" (click)=chamarConf()></ion-icon>
-          <!--5 caracteres invisiveis a esquerda-->
-    </ion-row>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-menu side="start" content-id="main-content">
+    <ion-header style="background-color: green;">
+      <ion-toolbar translucent>
+        <ion-row> </ion-row> <!-- Caractere invisível -->
+        <ion-title>
+          <img src="assets/icon/favicon.png">
+        </ion-title>
+        <ion-row> </ion-row> <!-- Caractere invisível -->
+        <b><ion-label style="font-size: 20px;">    BioMais</ion-label></b> <!-- Caracteres invisíveis -->
+        <ion-row> </ion-row> <!-- Caractere invisível -->
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="document-text-outline" color="medium" slot="start"></ion-icon>
+          <b><ion-label>Termos de Uso</ion-label></b>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="exit-outline" color="danger" slot="start"></ion-icon>
+          <b><ion-label>Sair</ion-label></b>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 
-<ion-content [fullscreen]="true">
-  <ion-grid>
-    <ion-row>
-      <ion-col size="6">
-        <ion-card (click)="chamardiGestorio()">
-          <img src="assets/img/Digestorio.jpeg">
-          <ion-card-header>
-            <ion-card-title >Sistema Digestório </ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-row>
+        <ion-title>Aprender</ion-title>
+        <ion-title color="success">{{quantidadeTotalPontos}} BioPontos</ion-title>
+        </ion-row>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div>
+        <img class="bordas" style="float: left; width: 45%; margin-right: 5%;  margin-left: 2%; margin-top: 2%; margin-bottom: 10px"   src="assets/teste/capasistemadigestorio.png" (click)="iniciarResolucao('1')"/>
+        <img class="bordas" style="float: left; width: 45%; margin-top: 2%; margin-bottom: 10px"  src="assets/teste/capacirculatorio.jpg" (click)="iniciarResolucao('2')"/>
+        </div>
 
-      <ion-col size="6">
-        <ion-card (click)="chamarcarDiovascular()">
-          <img src="assets/img/Cardiovascular.jpeg">
-          <ion-card-header>
-            <ion-card-title>Sistema Cardiovascular</ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-        <ion-col size="6">
-          <ion-card (click)="chamarRespiratorio()">
-            <img src="assets/img/Respiratorio.jpeg">
-            <ion-card-header>
-              <ion-card-title >Sistema Respiratório </ion-card-title>
-            </ion-card-header>
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="6">
-        <ion-card (click)="chamarUrinario()">
-          <img src="assets/img/Urinario.jpeg">
-          <ion-card-header>
-            <ion-card-title >Sistema Urinário </ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col size="6">
-        <ion-card (click)="chamarReprodutor()">
-          <img src="assets/img/Reprodutor.jpeg">
-          <ion-card-header>
-            <ion-card-title >Sistema Reprodutor </ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content>
+        <img class="bordas" style="width: 45%; margin-top: 6px" src="assets/teste/capasistemarespiratorio.png"/>
+        <img class="bordas" style="float: left; width: 45%; margin-right: 5%; margin-left: 2%; margin-top: 6px" src="assets/teste/capasistemareprodutor.png"/>
+        <div>
+        <img class="bordas" style="float: left; width: 45%; margin-top: 10px; margin-left: 2%" src="assets/teste/capasistemasensorial.png"/>
+        </div>
+    </ion-content>
+  </div>
+</ion-app>

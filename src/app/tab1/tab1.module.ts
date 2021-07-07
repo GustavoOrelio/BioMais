@@ -6,6 +6,10 @@ import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { IonicStorageModule } from '@ionic/storage';
+
+
+
 
 @NgModule({
   imports: [
@@ -13,7 +17,9 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    IonicModule.forRoot(),
+    IonicStorageModule.forRoot()
   ],
   declarations: [Tab1Page]
 })
